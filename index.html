@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MABA INDUCTION DAYS 2026 | Izin Sakit & Promise Letter</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(-45deg,#0f172a,#1e3a8a,#2563eb,#06b6d4);
+background-size:400% 400%;
+animation:bg 12s ease infinite;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:30px;
+overflow:auto;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.card{
+width:100%;
+max-width:900px;
+background:rgba(255,255,255,.1);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.2);
+border-radius:25px;
+padding:35px;
+color:white;
+box-shadow:0 20px 50px rgba(0,0,0,.3);
+animation:fade .8s;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(30px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+h1{
+text-align:center;
+font-size:34px;
+margin-bottom:5px;
+}
+
+.subtitle{
+text-align:center;
+opacity:.9;
+margin-bottom:30px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+label{
+display:block;
+margin-bottom:6px;
+font-size:14px;
+}
+
+input,select,textarea{
+width:100%;
+padding:13px;
+border:none;
+border-radius:12px;
+outline:none;
+margin-bottom:18px;
+font-size:15px;
+}
+
+textarea{
+height:130px;
+resize:none;
+}
+
+button{
+width:100%;
+padding:15px;
+border:none;
+border-radius:12px;
+background:#22d3ee;
+font-size:17px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.03);
+box-shadow:0 0 25px cyan;
+}
+
+.note{
+margin-top:20px;
+padding:15px;
+border-radius:12px;
+background:rgba(255,255,255,.08);
+font-size:14px;
+line-height:1.7;
+}
+
+.footer{
+margin-top:25px;
+text-align:center;
+font-size:13px;
+opacity:.8;
+}
+
+.success{
+display:none;
+margin-top:20px;
+padding:15px;
+border-radius:12px;
+background:#16a34a;
+text-align:center;
+font-weight:600;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>🎓 MABA INDUCTION DAYS 2026</h1>
+
+<p class="subtitle">
+Form Pengajuan Izin Sakit & Promise Letter
+</p>
+
+<form id="form">
+
+<div class="grid">
+
+<div>
+
+<label>Nama Lengkap</label>
+<input type="text" required>
+
+<label>NIM</label>
+<input type="text" required>
+
+<label>Program Studi</label>
+<input type="text" required>
+
+<label>Kelompok</label>
+<input type="text">
+
+</div>
+
+<div>
+
+<label>Jenis Pengajuan</label>
+
+<select required>
+
+<option value="">Pilih</option>
+
+<option>Izin Sakit</option>
+
+<option>Promise Letter</option>
+
+</select>
+
+<label>Tanggal</label>
+
+<input type="date" required>
+
+<label>Nomor WhatsApp</label>
+
+<input type="tel">
+
+<label>Upload Surat Pendukung</label>
+
+<input type="file">
+
+</div>
+
+</div>
+
+<label>Alasan / Penjelasan</label>
+
+<textarea placeholder="Tuliskan alasan dengan jelas..." required></textarea>
+
+<button type="submit">
+📨 Kirim Pengajuan
+</button>
+
+</form>
+
+<div class="success" id="success">
+✅ Pengajuan berhasil dikirim. Silakan menunggu verifikasi dari panitia MABA Induction Days 2026.
+</div>
+
+<div class="note">
+
+<b>Ketentuan:</b>
+
+<ul style="margin-left:20px;margin-top:10px;">
+<li>Izin sakit wajib melampirkan surat keterangan dokter apabila diminta panitia.</li>
+<li>Promise Letter digunakan apabila peserta tidak dapat mengikuti kegiatan sesuai ketentuan.</li>
+<li>Pastikan seluruh data yang diisi benar.</li>
+<li>Panitia akan menghubungi peserta melalui WhatsApp apabila diperlukan.</li>
+</ul>
+
+</div>
+
+<div class="footer">
+© 2026 MABA Induction Days • Digital Permission System
+</div>
+
+</div>
+
+<script>
+
+document.getElementById("form").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+document.getElementById("success").style.display="block";
+
+this.reset();
+
+window.scrollTo({
+top:document.body.scrollHeight,
+behavior:"smooth"
+});
+
+});
+
+</script>
+
+</body>
+</html>
