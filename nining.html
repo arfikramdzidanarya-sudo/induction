@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keep Fighting, Nining 🌸</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+background:linear-gradient(-45deg,#ff9a9e,#fad0c4,#fbc2eb,#a18cd1);
+background-size:400% 400%;
+animation:bgMove 15s ease infinite;
+}
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.card{
+position:relative;
+width:90%;
+max-width:760px;
+padding:45px;
+border-radius:30px;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.3);
+box-shadow:0 20px 45px rgba(0,0,0,.25);
+text-align:center;
+color:white;
+animation:fade 1.5s;
+z-index:2;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+h1{
+font-size:60px;
+font-family:'Dancing Script',cursive;
+margin-bottom:10px;
+}
+
+h2{
+font-size:26px;
+margin-bottom:25px;
+color:#fff8dc;
+}
+
+p{
+font-size:18px;
+line-height:1.9;
+margin-bottom:25px;
+}
+
+button{
+padding:15px 35px;
+border:none;
+border-radius:50px;
+background:white;
+color:#ff4f87;
+font-size:17px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+box-shadow:0 0 25px white;
+}
+
+#letter{
+display:none;
+margin-top:25px;
+padding:25px;
+border-radius:20px;
+background:rgba(255,255,255,.1);
+animation:fade 1s;
+}
+
+.sakura{
+position:absolute;
+top:-30px;
+font-size:24px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh) rotate(360deg);
+}
+}
+
+.footer{
+margin-top:25px;
+font-size:14px;
+opacity:.8;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>🌸 Dear Nining 🌸</h1>
+
+<h2>Keep Fighting & Never Give Up ✨</h2>
+
+<p>
+
+Tidak apa-apa jika hari ini terasa berat.<br>
+Tidak apa-apa jika kamu merasa lelah.<br><br>
+
+Yang terpenting adalah kamu tetap melangkah,
+meski hanya satu langkah kecil setiap harinya.
+
+</p>
+
+<button onclick="showLetter()">
+💌 Open Message
+</button>
+
+<div id="letter">
+
+<p>
+
+<b>Untuk Nining 💖</b><br><br>
+
+Semangat terus ya, Nining.
+
+Aku tahu perjalananmu tidak selalu mudah.
+Ada saatnya kamu merasa lelah, kecewa, bahkan ingin menyerah.
+Tapi percayalah, setiap usaha yang kamu lakukan hari ini
+akan menjadi alasan kamu tersenyum di masa depan.
+
+Jangan pernah meragukan dirimu sendiri.
+Kamu lebih kuat daripada yang kamu kira,
+lebih hebat daripada yang kamu sadari,
+dan lebih berani daripada yang kamu rasakan.
+
+<br><br>
+
+<b>Remember this...</b>
+
+<br><br>
+
+✨ <i>"Every great achievement begins with the decision to try."</i>
+
+<br><br>
+
+✨ <i>"Your dreams are worth every sacrifice."</i>
+
+<br><br>
+
+✨ <i>"Believe in yourself even when nobody else does."</i>
+
+<br><br>
+
+✨ <i>"Don't stop when you're tired. Stop when you're done."</i>
+
+<br><br>
+
+✨ <i>"You are stronger than your fears and brighter than your doubts."</i>
+
+<br><br>
+
+Teruslah mengejar impianmu.
+Tidak peduli seberapa lambat langkahmu,
+yang penting kamu tidak berhenti.
+
+Aku percaya...
+Suatu hari nanti kamu akan melihat ke belakang
+dan bangga karena tidak pernah menyerah.
+
+<br><br>
+
+<b>
+Keep smiling,
+keep growing,
+keep believing,
+and keep shining, Nining. 🌸
+</b>
+
+<br><br>
+
+❤️ <b>You can do it. I believe in you.</b>
+
+</p>
+
+</div>
+
+<div class="footer">
+
+Made with 🤍 just for Nining
+
+</div>
+
+</div>
+
+<script>
+
+function showLetter(){
+
+document.getElementById("letter").style.display="block";
+
+}
+
+for(let i=0;i<40;i++){
+
+let flower=document.createElement("div");
+
+flower.className="sakura";
+
+flower.innerHTML="🌸";
+
+flower.style.left=Math.random()*100+"vw";
+
+flower.style.fontSize=(16+Math.random()*18)+"px";
+
+flower.style.animationDuration=(6+Math.random()*8)+"s";
+
+flower.style.animationDelay=Math.random()*6+"s";
+
+document.body.appendChild(flower);
+
+}
+
+</script>
+
+</body>
+</html>
